@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
+
+@import 'nullStyle';
+
+$main-color: rgb(77, 116, 190);
+$border-radius: 5px;
+$font-weight: 700;
+$font-size-title: 16px;
+
+body {
+   font-family: Arial;
+   letter-spacing: 1px;
+}
+
+.wrapper {
+   max-width: 1440px;
+   height: 100%;
+   margin: 0 auto;
+}
+
+@import 'header';
+
+@import 'breadcrumbs';
+
+.main {
+   &__container {
+      max-width: 1000px;
+      margin: 60px auto;
+      display: flex;
+   }
+
+   &__search {
+      margin-right: 40px;
+   }
+
+   &__input {
+      padding: 10px;
+      background-color: rgba(160, 220, 240, 0.221);
+      border-radius: $border-radius;
+      letter-spacing: 1px;
+   }
+
+   &__title {
+      font-weight: $font-weight;
+      margin-top: 20px;
+      font-size: $font-size-title;
+   }
+
+   &__list {
+      margin-top: 10px;
+      margin-left: 10px;
+
+      & li {
+         margin-bottom: 10px;
+      }
+
+      & :last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__link {
+      color: $main-color;
+      transition: all 0.5s ease;
+
+      &:hover {
+         text-shadow: 3px 3px 5px $main-color;
+      }
+   }
+
+   &__sub-title {
+      margin-top: 20px;
+      font-weight: $font-weight;
+      font-size: $font-size-title;
+   }
+
+   &__range {
+      margin-top: 10px;
+      display: block;
+   }
+
+   &__info {
+      margin-top: 10px;
+      color: $main-color;
+   }
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 70px;
+   }
+
+   &__item {
+      margin-right: 10px;
+      margin-bottom: 30px;
+      cursor: pointer;
+   }
+}
+
+.item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: $border-radius;
+
+   &__img {
+      max-height: 140px;
+      border-radius: $border-radius;
+      pointer-events: none;
+   }
+
+   &__name {
+      margin-top: 10px;
+      color: $main-color;
+      pointer-events: none;
+   }
+
+   &__price {
+      margin-top: 8px;
+      font-weight: $font-weight;
+      pointer-events: none;
+   }
+}
+
+@import 'popup';
+
+@import 'cart';
+
+.active-link {
+   font-weight: $font-weight;
+}

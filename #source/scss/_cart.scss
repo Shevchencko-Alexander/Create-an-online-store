@@ -1,0 +1,154 @@
+$transition: all 0.5s ease;
+$text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.288);
+$border-radius: 5px;
+$box-shadow-color: black;
+$main-color: rgb(77, 116, 190);
+
+.cart {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.8);
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   transition: $transition;
+
+   &__body {
+      min-height: 100%;
+      display: flex;
+      justify-content: end;
+   }
+
+   &__content {
+      background-color: white;
+      width: 400px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: $transition;
+      opacity: 0;
+      transform: translate(+100%, 0px);
+   }
+
+   &__visible-content {
+      opacity: 1;
+      transform: translate(0px, 0px);
+   }
+
+   &__close {
+      height: 24px;
+      cursor: pointer;
+   }
+
+   &__title {
+      text-align: center;
+      font-size: 34px;
+      font-family: Caveat;
+      font-weight: 700;
+      margin-top: 10px;
+      text-shadow: $text-shadow;
+   }
+
+   &__elems {
+      margin-top: 20px;
+   }
+
+   &__result {
+      text-align: center;
+   }
+
+   &__total {
+      font-size: 34px;
+      font-family: Caveat;
+      font-weight: 700;
+      text-shadow: $text-shadow;
+   }
+
+   &__checkout {
+      margin-top: 20px;
+      background-color: brown;
+      color: white;
+      border-radius: $border-radius;
+      letter-spacing: 1px;
+      padding: 8px 90px;
+      transition: $transition;
+      box-shadow: 3px 3px 5px $box-shadow-color;
+
+      &:hover {
+         box-shadow: 1px 1px 5px $box-shadow-color;
+      }
+   }
+}
+
+.elem {
+   display: flex;
+   justify-content: space-between;
+   color: $main-color;
+   margin-bottom: 30px;
+
+   &__body {
+      display: flex;
+   }
+
+   &__img {
+      max-height: 60px;
+      border-radius: $border-radius;
+      margin-right: 25px;
+   }
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__title {
+      font-size: 16px;
+      font-weight: 700;
+   }
+
+   &__price {
+      margin-top: 5px;
+   }
+
+   &__remove {
+      margin-top: 10px;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+         text-shadow: 3px 3px 5px $main-color;
+      }
+   }
+
+   &__count {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__arrow-up {
+      cursor: pointer;
+      width: 15px;
+   }
+
+   &__counts {
+      margin-top: 5px;
+   }
+
+   &__arrow-down {
+      cursor: pointer;
+      margin-top: 5px;
+   }
+}
+
+.visible {
+   opacity: 1;
+   visibility: visible;
+}
+
+.noScroll {
+   overflow: hidden;
+}

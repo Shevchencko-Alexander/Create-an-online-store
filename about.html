@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Task 2.8 - Create an online store</title>
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      />
+      <link rel="stylesheet" href="css/about.css" />
+      <meta charset="UTF-8" />
+   </head>
+   <body>
+      <div class="wrapper">
+         <section class="top">
+            <header class="header">
+               <nav>
+                  <ul class="header__list">
+                     <li>
+                        <a href="./index.html" class="header__link">Home</a>
+                     </li>
+                     <li>
+                        <a href="./products.html" class="header__link"
+                           >Products</a
+                        >
+                     </li>
+                     <li>
+                        <a href="./about.html" class="header__link">About</a>
+                     </li>
+                  </ul>
+               </nav>
+               <h1 class="header__title">comfy</h1>
+               <div class="header__bag-container">
+                  <div class="header__counts"></div>
+                  <img src="./img/cartDark.svg" class="header__bag" />
+               </div>
+            </header>
+         </section>
+         <section class="breadcrumbs">
+            <div class="breadcrumbs__items">
+               <a href="./index.html" class="breadcrumbs__link">Home</a>
+               <span class="breadcrumbs__select-page">About</span>
+            </div>
+         </section>
+         <section class="info">
+            <div class="info__container">
+               <h2 class="info__title">Our History</h2>
+               <p class="info__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  deleniti suscipit quas cumque ipsum fugit. Reprehenderit
+                  impedit aperiam sapiente cum esse atque iste ipsam. Voluptas
+                  quaerat expedita suscipit dolores maxime. Quia facilis
+                  aspernatur cum inventore aliquid, deleniti odit accusantium
+                  facere omnis. Nemo enim in culpa deleniti nostrum facere,
+                  asperiores consequuntur quisquam amet earum ab soluta, minima,
+                  fuga dolorum est animi. Aliquid, nobis. Atque inventore
+                  perferendis a? At in quo voluptas eveniet voluptatibus,
+                  accusamus, soluta id nemo, magni eligendi ab aliquam autem
+                  expedita optio illum. Repudiandae corrupti sint repellat magni
+                  vero.
+               </p>
+            </div>
+         </section>
+      </div>
+      <div class="cart">
+         <div class="cart__body">
+            <div class="cart__content">
+               <section class="cart__info">
+                  <img src="./img/cart/delete.svg" class="cart__close" />
+                  <h2 class="cart__title">Your Bag</h2>
+                  <div class="cart__elems"></div>
+               </section>
+               <section class="cart__result">
+                  <div class="cart__total">
+                     <span class="cart__total-text">Total :</span>
+                     <span class="cart__total-result"></span>
+                  </div>
+                  <button class="cart__checkout">CHECKOUT</button>
+               </section>
+            </div>
+         </div>
+      </div>
+      <script type="module" src="js/cart.js"></script>
+   </body>
+</html>

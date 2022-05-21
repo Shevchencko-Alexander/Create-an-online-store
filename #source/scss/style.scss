@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
+
+@import 'nullStyle';
+
+$font-weight: 700;
+$border-radius: 5px;
+$transition: all 0.5s ease;
+$box-shadow-color: black;
+
+body {
+   font-family: Arial;
+   letter-spacing: 1px;
+}
+
+.wrapper {
+   max-width: 1440px;
+   height: 100%;
+   margin: 0 auto;
+}
+
+.main {
+   position: relative;
+
+   &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter: blur(2px);
+      background: url(../img/main/main.jpg) 0 0 / cover no-repeat;
+   }
+
+   &__container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__info {
+      margin: 220px 0;
+      color: white;
+   }
+
+   &__sub-title {
+      font-family: Caveat;
+      font-size: 48px;
+      font-weight: $font-weight;
+   }
+
+   &__text {
+      font-size: 18px;
+      margin-top: 20px;
+   }
+
+   &__btn {
+      display: inline-block;
+      margin-top: 20px;
+      color: white;
+      padding: 8px;
+      border: 2px solid white;
+      border-radius: $border-radius;
+      transition: $transition;
+
+      &:hover {
+         background-color: white;
+         color: black;
+      }
+   }
+}
+
+.header {
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   &__list {
+      font-size: 16px;
+
+      & li {
+         display: inline-block;
+         margin-right: 30px;
+      }
+
+      & :last-child {
+         margin-right: 0;
+      }
+   }
+
+   &__link {
+      color: white;
+      transition: $transition;
+
+      &:hover {
+         text-shadow: 3px 3px 3px white;
+      }
+   }
+
+   &__title {
+      font-size: 44px;
+      font-weight: $font-weight;
+      color: white;
+      font-family: Caveat;
+      text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.382);
+   }
+
+   &__bag-container {
+      position: relative;
+   }
+
+   &__counts {
+      position: absolute;
+      top: -3px;
+      right: -5px;
+      background-color: brown;
+      color: white;
+      font-weight: $font-weight;
+      border-radius: 50%;
+      height: 18px;
+      width: 18px;
+      font-size: 12px;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   &__bag {
+      width: 30px;
+      cursor: pointer;
+   }
+}
+
+.featured {
+   &__container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__title {
+      margin: 50px 0 25px;
+      font-weight: $font-weight;
+      font-size: 24px;
+
+      &::before {
+         content: '/';
+         color: brown;
+         margin-right: 10px;
+      }
+   }
+
+   &__items {
+      display: flex;
+   }
+
+   &__item {
+      margin-right: 15px;
+   }
+
+   &__btn {
+      margin: 30px 0 50px;
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: brown;
+      color: white;
+      border-radius: $border-radius;
+      transition: $transition;
+      box-shadow: 3px 3px 5px $box-shadow-color;
+
+      &:hover {
+         box-shadow: 1px 1px 5px $box-shadow-color;
+      }
+   }
+}
+
+.item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: $border-radius;
+
+   &__img {
+      max-height: 180px;
+      border-radius: $border-radius;
+   }
+
+   &__name {
+      margin-top: 10px;
+      color: rgb(77, 116, 190);
+   }
+
+   &__price {
+      margin-top: 8px;
+      font-weight: $font-weight;
+   }
+}
+
+@import 'cart';
