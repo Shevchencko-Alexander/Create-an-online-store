@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Task 2.8 - Create an online store</title>
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      />
+      <link rel="stylesheet" href="css/products.css" />
+      <meta charset="UTF-8" />
+   </head>
+   <body>
+      <div class="wrapper">
+         <section class="top">
+            <header class="header">
+               <nav>
+                  <ul class="header__list">
+                     <li>
+                        <a href="./index.html" class="header__link">Home</a>
+                     </li>
+                     <li>
+                        <a href="./products.html" class="header__link"
+                           >Products</a
+                        >
+                     </li>
+                     <li>
+                        <a href="./about.html" class="header__link">About</a>
+                     </li>
+                  </ul>
+               </nav>
+               <h1 class="header__title">comfy</h1>
+               <div class="header__bag-container">
+                  <div class="header__counts"></div>
+                  <img src="./img/cartDark.svg" class="header__bag" />
+               </div>
+            </header>
+         </section>
+         <section class="breadcrumbs">
+            <div class="breadcrumbs__items">
+               <a href="./index.html" class="breadcrumbs__link">Home</a>
+               <span class="breadcrumbs__select-page">Products</span>
+            </div>
+         </section>
+         <section class="main">
+            <div class="main__container">
+               <div class="main__search">
+                  <input
+                     type="text"
+                     placeholder="Search..."
+                     class="main__input"
+                  />
+                  <h2 class="main__title">Company</h2>
+                  <ul class="main__list">
+                     <li><a href="" class="main__link">All</a></li>
+                     <li><a href="" class="main__link">Ikea</a></li>
+                     <li><a href="" class="main__link">Marcos</a></li>
+                     <li><a href="" class="main__link">Caressa</a></li>
+                     <li><a href="" class="main__link">Liddy</a></li>
+                  </ul>
+                  <h2 class="main__sub-title">Price</h2>
+                  <input
+                     type="range"
+                     min="6"
+                     max="80"
+                     value="6"
+                     class="main__range"
+                  />
+                  <div class="main__info">
+                     <span class="main__text">Value:</span>
+                     <span class="main__value">$6</span>
+                  </div>
+               </div>
+               <div class="main__items"></div>
+            </div>
+         </section>
+      </div>
+      <div class="popup">
+         <div class="popup__body">
+            <div class="popup__content">
+               <p class="popup__text">Add this product to cart ?</p>
+               <div class="popup__buttons">
+                  <button class="popup__btn yes">Yes</button>
+                  <button class="popup__btn no">No</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="cart">
+         <div class="cart__body">
+            <div class="cart__content">
+               <section class="cart__info">
+                  <img src="./img/cart/delete.svg" class="cart__close" />
+                  <h2 class="cart__title">Your Bag</h2>
+                  <div class="cart__elems"></div>
+               </section>
+               <section class="cart__result">
+                  <div class="cart__total">
+                     <span class="cart__total-text">Total :</span>
+                     <span class="cart__total-result"></span>
+                  </div>
+                  <button class="cart__checkout">CHECKOUT</button>
+               </section>
+            </div>
+         </div>
+      </div>
+      <script type="module" src="js/products.js"></script>
+      <script type="module" src="js/cart.js"></script>
+   </body>
+</html>

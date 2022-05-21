@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Task 2.8 - Create an online store</title>
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      />
+      <link rel="stylesheet" href="css/style.css" />
+      <meta charset="UTF-8" />
+   </head>
+   <body>
+      <div class="wrapper">
+         <section class="main">
+            <div class="main__container">
+               <header class="main__header header">
+                  <nav>
+                     <ul class="header__list">
+                        <li>
+                           <a href="./index.html" class="header__link">Home</a>
+                        </li>
+                        <li>
+                           <a href="./products.html" class="header__link"
+                              >Products</a
+                           >
+                        </li>
+                        <li>
+                           <a href="./about.html" class="header__link">About</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <h1 class="header__title">comfy</h1>
+                  <div class="header__bag-container">
+                     <div class="header__counts"></div>
+                     <img src="./img/cartDark.svg" class="header__bag" />
+                  </div>
+               </header>
+               <div class="main__info">
+                  <h2 class="main__sub-title">Rest, Relax, Unwind</h2>
+                  <p class="main__text">Embrace your choices - we do</p>
+                  <a href="./products.html" class="main__btn">show now</a>
+               </div>
+            </div>
+         </section>
+         <section class="featured">
+            <div class="featured__container">
+               <h2 class="featured__title">Featured</h2>
+               <div class="featured__items"></div>
+               <a href="./products.html" class="featured__btn">ALL PRODUCTS</a>
+            </div>
+         </section>
+      </div>
+      <div class="cart">
+         <div class="cart__body">
+            <div class="cart__content">
+               <section class="cart__info">
+                  <img src="./img/cart/delete.svg" class="cart__close" />
+                  <h2 class="cart__title">Your Bag</h2>
+                  <div class="cart__elems"></div>
+               </section>
+               <section class="cart__result">
+                  <div class="cart__total">
+                     <span class="cart__total-text">Total :</span>
+                     <span class="cart__total-result"></span>
+                  </div>
+                  <button class="cart__checkout">CHECKOUT</button>
+               </section>
+            </div>
+         </div>
+      </div>
+      <script type="module" src="js/main.js"></script>
+      <script type="module" src="js/cart.js"></script>
+   </body>
+</html>
